@@ -61,7 +61,7 @@
 > 
 > 使用对象的形式进行优化，只会单独监听对象中对应的属性
 
-#### 样式类名class
+#### class类名样式
 > 第一种：放置字符串------------>  `<p class="active">hello</p>`
 > 
 > 第二种：放置对象-------------->  `<p :class="{类名:boolean,类名:boolean}">hello</p>`
@@ -69,5 +69,36 @@
 > 和普通类同时存在，不会起冲突----> `<p :class="{active:isActive}" class="helloWorld">hello</p>`
 > 
 > 第三种：数组的方式（不常用）-------------> `<p :class="[message,activeClass]">helloArray</p>`
+> 
 > 数组和对象结合使用----------------------> `<p :class="[message,{active:isActive}]">hello3</p>`
 
+#### style内联样式
+> 第一种放置字符串 ---------------> `<p style="color:red">hello</p>`
+> 
+> 第二种放置对象------------------> `<p :style="{key(css属性名):value(属性值，来自于data中的属性)}">hello</p>`
+> 
+> CSS property 名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用引号括起来) 来命名
+> 
+> 数组的方式----------------------> `<p :style="[styleObj,{border:'5px solid blue'}]">hello</p>`
+
+#### 条件语句
+> v-if
+> 
+> v-else-if
+> 
+> v-else
+> 
+> 在 `<template>` 元素上使用 v-if 条件渲染分组此时可以把一个 `<template>` 元素当做不可见的包裹元素，并在上面使用 v-if。最终的渲染结果将不包含 `<template>`元素
+> 
+> v-show : 简单切换元素的display CSS property
+
+#### v-if和v-show的区别
+> 不同的是带有 v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 CSS property display。
+> 
+> `注意，v-show 不支持 <template> 元素，也不支持 v-else。`
+> 
+> v-if:只要后面为false，对应的元素以及子元素都不会被渲染，控制dom元素的创建和销毁
+> 
+> 频繁切换状态的时候使用 **v-show**
+> 
+> 运行条件很少改变的时候使用  **v-if**
