@@ -1,6 +1,14 @@
 <template>
-    <h2>Vue基础相关内容总结完毕，下一节《Vue3组合式API》</h2>
+    <HelloView></HelloView>
 </template>
+<script>
+import HelloView from './components/HomeView.vue'
+export default {
+    components:{
+        HelloView
+    }
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
