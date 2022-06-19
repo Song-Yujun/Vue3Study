@@ -186,3 +186,10 @@
 > 
 > 10. 第十步：beforeUnmount（vue2：beforeDestroy）----------解绑之前，vue实例解绑之前
 > 11. 第十一步：unmounted（vue2：destroyed）----------------实例解绑之后
+
+
+## 组合式API
+> 好处：将同一个逻辑关注点相关代码收集在一起
+> 
+> setup : 组件被创建之前被执行，在beforeCreate之前执行，代替了beforeCreate和created,不需要使用this，this不会指向实例
+> 
