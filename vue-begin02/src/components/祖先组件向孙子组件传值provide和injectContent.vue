@@ -2,11 +2,12 @@
   <div>
     <h2>{{ msg }}</h2>
     <p>--------------</p>
+    {{ name }}
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, inject } from "vue";
 export default {
   data() {
     return {
@@ -14,7 +15,10 @@ export default {
     };
   },
   setup() {
-    
+    const name = inject("name");
+    return {
+      name,
+    };
   },
 };
 </script>
