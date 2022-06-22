@@ -192,4 +192,3 @@
 > 好处：将同一个逻辑关注点相关代码收集在一起
 > 
 > setup : 组件被创建之前被执行，在beforeCreate之前执行，代替了beforeCreate和created,不需要使用this，this不会指向实例
-> 
